@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".35*"/>
+            <RowDefinition Height=".35*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".35*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".35*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="365"/>
+
+        </Grid.ColumnDefinitions>
+        <Label BackgroundColor="DarkSlateBlue" TextColor="White" Text="SIMPLE INTEREST" FontSize="Title" Grid.Row="0" HorizontalTextAlignment="Center" Padding="10" ></Label>
+        
+        <Label Grid.Row="1" Text="PRINCIPLE AMOUNT($)" TextColor="DarkBlue" FontSize="Medium" HorizontalTextAlignment="Center" Padding="10"></Label>
+        <Entry Grid.Row="2"  Placeholder="" x:Name="PA" HorizontalTextAlignment="Center"></Entry>
+        
+        <Label Grid.Row="3" Text="NUMBER OF YEARS" TextColor="DarkBlue" FontSize="Medium" HorizontalTextAlignment="Center"></Label>
+        <Entry Grid.Row="4"  Placeholder="" x:Name="YR" HorizontalTextAlignment="Center"></Entry>
+        
+        <Label  Grid.Row="5" Text="RATE OF INTEREST(%)" TextColor="DarkBlue" FontSize="Medium" HorizontalTextAlignment="Center"></Label>
+        <Entry Grid.Row="6"  Placeholder="" x:Name="I" HorizontalTextAlignment="Center"></Entry>
+        
+        <Button  Grid.Row="8" Text="CALCULATE" TextColor="WhiteSmoke" BackgroundColor="DarkBlue"   CornerRadius="45" Clicked="Button_Clicked" Margin="10" HorizontalOptions="Center" WidthRequest="150" ></Button>
+        
+        <Label Grid.Row="9" Text="INTEREST AMOUNT" FontSize="Medium" HorizontalTextAlignment="Center" ></Label>
+        <Label Grid.Row="10"  x:Name="SI" HorizontalTextAlignment="Center" FontSize="Medium"></Label>
+
+        <Button Grid.Row="11" Text="CLEAR" TextColor="WhiteSmoke" BackgroundColor="DarkBlue" CornerRadius="45"
+                 Command="{Binding LocalCommand}"
+                Margin="10" HorizontalOptions="Center" WidthRequest="100"   ></Button>
+    </Grid>
+</ContentPage>
